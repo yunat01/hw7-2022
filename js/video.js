@@ -36,19 +36,19 @@ var original = document.querySelector("#orig");
 	});
 
 	slower.addEventListener("click", function(){
-		video.playbackRate *=.95;
+		video.playbackRate *=.9;
 		console.log("New speed is " + video.playbackRate)
 	});
 
 	faster.addEventListener("click", function() {
-		video.playbackRate /= .95
+		video.playbackRate /= .9;
 		console.log("New speed is " + video.playbackRate)
 	});
 
 	skip.addEventListener("click", function() {
 		console.log("Original location " + video.currentTime)
-		if (video.currentTime < video.duration - 15) {
-			video.currentTime += 15;
+		if (video.currentTime < video.duration - 10) {
+			video.currentTime += 10;
 			console.log("New location " + video.currentTime)
 		}
 		else {
